@@ -1,4 +1,4 @@
-import { ChevronRight, Code, HandCoins } from "lucide-react";
+import { ChevronRight, Code, Globe, HandCoins } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Hero() {
@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="flex-1">
           <div className="w-full flex h-screen flex-col justify-center items-center">
             <h1 className="text-5xl text-center font-bold">
-              Exchange currency with the latest update
+              Instant Currency Exchange, Powered by the Latest Market Updates.
             </h1>
             <div>
               <p className="text-base text-center mt-8">
@@ -19,13 +19,13 @@ export default function Hero() {
             <div className="flex gap-4 mt-8">
               <Button
                 variant="outline"
-                className="rounded-none uppercase bg-brand/90 text-white hover:bg-brand hover:text-white hover:cursor-pointer"
+                className="rounded-none uppercase bg-brand/90  text-white hover:bg-brand hover:text-white hover:cursor-pointer"
               >
                 Get started
               </Button>
               <Button
                 variant="ghost"
-                className="uppercase text-brand underline"
+                className="uppercase text-brand underline hover:bg-transparent hover:text-brand cursor-pointer"
               >
                 discover more <ChevronRight />
               </Button>
@@ -35,10 +35,10 @@ export default function Hero() {
         <div className="flex-1 relative">
           <img src="./images/woman-shape-2.png" alt="" />
           <div className="absolute top-0 w-full flex justify-center items-center h-full right-0">
-            <div className="absolute right-16 top-8 bg-brand text-white rounded-full animate-bounce p-3 transition-all duration-[4000ms]">
-              <Code size={32} />
+            <div className="absolute right-24 top-8 bg-brand text-white rounded-full animate-bounce p-2 transition-all duration-[4000ms]">
+              <Globe size={32} />
             </div>
-            <div className="absolute left-7 bottom-0 bg-brand text-white rounded-full animate-bounce p-3 transition-all duration-[4000ms]">
+            <div className="absolute left-7 bottom-0 bg-brand text-white rounded-full animate-bounce p-2 transition-all duration-[4000ms]">
               <HandCoins size={32} />
             </div>
             <img

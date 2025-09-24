@@ -17,7 +17,7 @@ export default function Navbar() {
     month: "long",
     day: "numeric",
   };
-  date1.toLocaleDateString("fa-AF", options);
+  // date1.toLocaleDateString("fa-AF", options);
   const [isOpen, setIsOpen] = useState(false);
   const navList = [
     { href: "/", title: "Home" },
