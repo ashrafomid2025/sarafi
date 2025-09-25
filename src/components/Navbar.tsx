@@ -5,19 +5,8 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const date1 = new Date();
-  interface options {
-    weekday: string;
-    year: string;
-    month: string;
-    day: string;
-  }
-  const options: options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
-  // date1.toLocaleDateString("fa-AF", options);
+
+  const shamsi = date1.toLocaleDateString("fa-AF");
   const [isOpen, setIsOpen] = useState(false);
   const navList = [
     { href: "/", title: "Home" },
@@ -28,7 +17,7 @@ export default function Navbar() {
     { href: "/blogs", title: "Blogs" },
   ];
   return (
-    <div className="w-full fixed top-0 left-0 md:p-3 backdrop:blur-md ">
+    <div className="w-full fixed top-0 left-0 md:p-3 backdrop-blur-xl ">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="font-brush text-xl font-bold">Sharifi Exchage Rate</h1>
@@ -41,7 +30,12 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden md:flex space-x-4">
-          <Button>News</Button>
+          <Button
+            variant="outline"
+            className="rounded-md hover:bg-brand hover:text-white bg-brand text-xl font-semibold text-white"
+          >
+            {shamsi}
+          </Button>
         </div>
         <div className="md:hidden">
           <Menu
