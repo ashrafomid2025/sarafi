@@ -7,6 +7,8 @@ import Exchange from "./pages/Exchange";
 import Market from "./pages/Market";
 import Blogs from "./pages/Blogs";
 import Navbar from "./components/Navbar";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
   return (
     <div className="bg-stone-50 font-inter">

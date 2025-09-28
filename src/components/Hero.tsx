@@ -1,13 +1,15 @@
 import { ChevronRight, Code, Globe, HandCoins } from "lucide-react";
 import { Button } from "./ui/button";
-import { motion } from "framer-motion";
+
+import MarqueeItem from "./VelocityText";
+
 export default function Hero() {
   const texts = [
     "Exchange Rate",
     "Updates Realtime",
-    "Exchange currency anytime",
+    "Exchange anything",
     "trustful source",
-    "Built with love and Passion",
+    "Built with ❤️",
   ];
   return (
     <div className="w-full min-h-screen md:mt-5">
@@ -56,33 +58,10 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-4 z-50 bg-white/80 text-black">
+      <div className="absolute bottom-0 z-50 bg-white/90 text-black">
         <div className="w-full relative overflow-x-hidden">
-          <motion.div
-            initial={{ x: 0 }}
-            animate={{ x: "-100%" }}
-            transition={{ duration: 5, ease: "linear", repeat: Infinity }}
-            className="w-full overflow-x-hidden z-20 flex space-x-2 text-center text-base font-bold shrink-0"
-          >
-            {texts.map((text, index) => (
-              <h1 className="z-20" key={index}>
-                {text}
-              </h1>
-            ))}
-          </motion.div>
-          <div className="absolute  left-0 bottom-0 ">
-            <motion.div
-              initial={{ x: 0 }}
-              animate={{ x: "-100%" }}
-              transition={{ duration: 15, ease: "linear", repeat: Infinity }}
-              className="w-full overflow-x-hidden flex space-x-2 shrink-0"
-            >
-              {texts.map((text, index) => (
-                <h1 className="-z-10" key={index}>
-                  {text}
-                </h1>
-              ))}
-            </motion.div>
+          <div className="container mx-auto ">
+            <MarqueeItem texts={texts} />
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
-import { CircleCheck, Code } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 import { motion } from "framer-motion";
 export default function AboutUs() {
   return (
-    <div className="w-full overflow-x-hidden mt-5 grid grid-cols-1 md:grid-cols-2">
+    <div className="w-full min-h-screen overflow-x-hidden mt-5 grid grid-cols-1 md:grid-cols-2">
       <motion.div
         initial={{ x: "-50px" }}
         whileInView={{ x: 0 }}
@@ -10,13 +10,6 @@ export default function AboutUs() {
         className="w-full flex relative justify-center items-center"
       >
         <img className="w-10/12 h-72" src="./images/download2.png" alt="" />
-        <motion.div
-          initial={{ rotate: 0 }}
-          animate={{ rotate: "360deg" }}
-          className="absolute top-1/2 left-1/2 -translate-1/2 border rounded-full w-11/12 h-11/12"
-        >
-          <Code />
-        </motion.div>
       </motion.div>
       <motion.div
         initial={{ x: "50px" }}

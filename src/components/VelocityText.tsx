@@ -1,73 +1,41 @@
 import { motion } from "framer-motion";
 
-export const RevealLinks = () => {
+type MarqueeItemProps = {
+  texts: string[];
+};
+
+const MarqueeItem = ({ texts }: MarqueeItemProps) => {
   return (
-    <section className="grid place-content-center -mt-16 ">
-      <FlipLink href="#">Let Transform everything you want</FlipLink>
-    </section>
+    <div className="flex ">
+      {/* First Marquee */}
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: "-100%" }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        className="flex flex-shrink-0"
+      >
+        {texts.map((text, index) => (
+          <h1 className="h-fit pr-12 " key={index}>
+            {text}
+          </h1>
+        ))}
+      </motion.div>
+
+      {/* Second Marquee */}
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: "-100%" }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        className="flex flex-shrink-0"
+      >
+        {texts.map((text, index) => (
+          <h1 className=" pr-12 h-fit " key={index}>
+            {text}
+          </h1>
+        ))}
+      </motion.div>
+    </div>
   );
 };
 
-const DURATION = 0.25;
-const STAGGER = 0.025;
-
-const FlipLink = ({ children, href }: { children: string; href: string }) => {
-  return (
-    <motion.a
-      initial="initial"
-      whileInView="hovered"
-      href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-3xl font-black uppercase sm:text-3xl md:text-4xl lg:text-5xl"
-      style={{
-        lineHeight: 0.75,
-      }}
-    >
-      <div>
-        {children.split("").map((l, i) => (
-          <motion.span
-            variants={{
-              initial: {
-                y: 0,
-              },
-              hovered: {
-                y: "-100%",
-              },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block"
-            key={i}
-          >
-            {l}
-          </motion.span>
-        ))}
-      </div>
-      <div className="absolute  inset-0">
-        {children.split("").map((l, i) => (
-          <motion.span
-            variants={{
-              initial: {
-                y: "100%",
-              },
-              hovered: {
-                y: 0,
-              },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className="inline-block"
-            key={i}
-          >
-            {l}
-          </motion.span>
-        ))}
-      </div>
-    </motion.a>
-  );
-};
+export default MarqueeItem;
