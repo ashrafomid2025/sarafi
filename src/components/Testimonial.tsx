@@ -1,16 +1,55 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider, { Settings } from "react-slick";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Slider from "react-slick";
+import type { Settings } from "react-slick";
+// import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
 const Testimonial = () => {
+  const testimonials: {
+    name: string;
+    address: string;
+    imgUrl: string;
+    comment: string;
+  }[] = [
+    {
+      name: "Ali Ahmadi",
+      address: "Kabul, Afghanistan",
+      imgUrl: "./testimonial/m4.JPG",
+      comment:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fugiat. Error quae repudiandae sunt inventore dolorum, sed itaque. Dolorum tempora quam",
+    },
+    {
+      name: "Mustafa Rahimi",
+      address: "Herat, Afghanistan",
+      imgUrl: "./testimonial/m5.jpg",
+      comment:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fugiat. Error quae repudiandae sunt inventore dolorum, sed itaque. Dolorum tempora quam",
+    },
+    {
+      name: "Omid Mohammadi",
+      address: "Kandahar, Afghanistan",
+      imgUrl: "./testimonial/me.jpg",
+      comment:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fugiat. Error quae repudiandae sunt inventore dolorum, sed itaque. Dolorum tempora quam",
+    },
+    {
+      name: "Wais Ahmadi",
+      address: "Khost, Afghanistan",
+      imgUrl: "./testimonial/photo.png",
+      comment:
+        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fugiat. Error quae repudiandae sunt inventore dolorum, sed itaque. Dolorum tempora quam",
+    },
+  ];
   const settings: Settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    initialSlide: 1,
-    arrows: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    initialSlide: 2,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 1500,
     responsive: [
       {
         breakpoint: 1024,
@@ -22,7 +61,7 @@ const Testimonial = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -39,89 +78,34 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="w-full mt-8 min-h-screen">
-      <Slider {...settings}>
-        <Card className="w-fit p-6 mr-5">
-          <CardHeader>
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
-              className="h-20 w-72 rounded-full"
-              alt=""
-            />
-          </CardHeader>
-          <CardContent>
-            <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus, fugiat. Error quae repudiandae sunt inventore
-              dolorum, sed itaque. Dolorum tempora quam
-            </h1>
-          </CardContent>
-        </Card>
-        <Card className="w-fit p-6">
-          <CardHeader>
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
-              className="h-20 w-72 rounded-full"
-              alt=""
-            />
-          </CardHeader>
-          <CardContent>
-            <q>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus, fugiat. Error quae repudiandae sunt inventore
-              dolorum, sed itaque. Dolorum tempora quam
-            </q>
-          </CardContent>
-        </Card>
-        <Card className="w-fit p-6 mr-5">
-          <CardHeader>
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
-              className="h-20 w-72 rounded-full"
-              alt=""
-            />
-          </CardHeader>
-          <CardContent>
-            <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus, fugiat. Error quae repudiandae sunt inventore
-              dolorum, sed itaque. Dolorum tempora quam
-            </h1>
-          </CardContent>
-        </Card>{" "}
-        <Card className="w-fit p-6">
-          <CardHeader>
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
-              className="h-20 w-72 rounded-full"
-              alt=""
-            />
-          </CardHeader>
-          <CardContent>
-            <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus, fugiat. Error quae repudiandae sunt inventore
-              dolorum, sed itaque. Dolorum tempora quam
-            </h1>
-          </CardContent>
-        </Card>
-        <Card className="w-fit p-6">
-          <CardHeader>
-            <img
-              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww"
-              className="h-20 w-72 rounded-full"
-              alt=""
-            />
-          </CardHeader>
-          <CardContent>
-            <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus, fugiat. Error quae repudiandae sunt inventore
-              dolorum, sed itaque. Dolorum tempora quam
-            </h1>
-          </CardContent>
-        </Card>
-      </Slider>
+    <div className="h-screen w-full flex flex-col items-center">
+      <h1 className="text-5xl font-bold">Testimonials</h1>
+      <p className="text-base">Read the experience of our happy client</p>
+      <div className="w-full ">
+        <Slider {...settings}>
+          {testimonials.map((feedback, index) => (
+            <div
+              key={index}
+              className="p-4 border
+             rounded-xl slideBox mr-8 relative  h-fit bg-white"
+            >
+              <img
+                src="./testimonial/quotes.png"
+                className="h-16 w-16  absolute left-2 top-1.5"
+                alt=""
+              />
+              <img
+                className="h-20 w-20 rounded-full"
+                src={feedback.imgUrl}
+                alt={feedback.name}
+              />
+              <h1 className="font-bold text-xl">{feedback.name}</h1>
+              <address>{feedback.address}</address>
+              <p>{feedback.comment}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
