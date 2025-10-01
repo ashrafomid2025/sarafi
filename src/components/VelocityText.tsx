@@ -6,7 +6,7 @@ type MarqueeItemProps = {
 
 const MarqueeItem = ({ texts }: MarqueeItemProps) => {
   return (
-    <div className="flex ">
+    <div className="flex">
       {/* First Marquee */}
       <motion.div
         initial={{ x: 0 }}

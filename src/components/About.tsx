@@ -1,4 +1,4 @@
-import { CircleCheck } from "lucide-react";
+import { Bitcoin, CircleCheck, CurrencyIcon, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 export default function AboutUs() {
   return (
@@ -7,15 +7,40 @@ export default function AboutUs() {
         initial={{ x: "-50px" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 0.9, ease: "linear" }}
-        className="w-full flex relative justify-center items-center"
+        className="w-full flex relative justify-center items-center overflow-hidden"
       >
-        <img className="w-10/12 h-72" src="./images/download2.png" alt="" />
+        <img className="w-10/12 h-9/12" src="./images/download2.png" alt="" />
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          className="w-10/12 h-9/12 absolute top-1/2 left-1/2 overflow-hidden"
+        >
+          <div
+            className="p-4 w-fit absolute left-0 top-0 rounded-md bg-brand text-white"
+            style={{ transform: "rotate(0deg) " }}
+          >
+            <Globe size={20} />
+          </div>
+          <div
+            className="p-4 w-fit rounded-md bg-brand text-white"
+            style={{ transform: "rotate(120deg)" }}
+          >
+            <Bitcoin />
+          </div>
+          <div
+            className="p-4 w-fit rounded-md bg-brand text-white"
+            style={{ transform: "rotate(240deg)" }}
+          >
+            <CurrencyIcon className="p-4 rounde-md transform text-white" />
+          </div>
+        </motion.div>
       </motion.div>
       <motion.div
         initial={{ x: "50px" }}
         whileInView={{ x: 0 }}
         transition={{ duration: 0.5, ease: "linear" }}
-        className="flex flex-col gap-2.5"
+        className="flex flex-col gap-2.5 overflow-hidden"
       >
         <h1 className="text-3xl lg:text-4xl font-bold">About Us</h1>
         <h1 className="mt-2 lg:mt-4">
