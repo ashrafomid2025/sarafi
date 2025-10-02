@@ -30,29 +30,38 @@ function SingleFaq({ q, a, index }: { q: string; a: string; index: number }) {
 export default function FAQ() {
   const faqs: { question: string; answer: string }[] = [
     {
-      question: "How much accurate the data of this site?",
+      question: "How accurate is the exchange rate data on this site?",
       answer:
-        "As long as we get the data in streamline we ensure you that the data you get is up to date Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis tempore eaque atque explicabo, voluptatem, minus, deleniti repellat aliquid sint autem veniam repellendus mollitia nam aut accusamus minima alias sed.",
+        "Our exchange rate data is sourced directly from reputable financial institutions and updated in real-time or at frequent intervals. This ensures you always have access to the most reliable and accurate rates available.",
     },
     {
-      question: "How to exchage my currency in the right way?",
+      question: "How can I exchange my currency safely?",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis tempore eaque atque explicabo, voluptatem, minus, deleniti repellat aliquid sint autem veniam repellendus mollitia nam aut accusamus minima alias sed.",
+        "To exchange your currency safely, always use authorized banks, licensed exchange offices, or trusted online platforms. Avoid unverified sources, and check the rates and transaction fees before proceeding.",
     },
     {
-      question: "What other services do you provide?",
+      question: "What other services do you provide besides exchange rates?",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis tempore eaque atque explicabo, voluptatem, minus, deleniti repellat aliquid sint autem veniam repellendus mollitia nam aut accusamus minima alias sed.",
+        "In addition to live exchange rates, we provide historical rate charts, currency conversion calculators, market news, and financial insights to help users make better decisions when trading or traveling.",
     },
     {
-      question: "Do you have any mobile application? ",
+      question: "Do you have a mobile application?",
       answer:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo omnis tempore eaque atque explicabo, voluptatem, minus, deleniti repellat aliquid sint autem veniam repellendus mollitia nam aut accusamus minima alias sed.",
+        "Yes, we offer a mobile app available for both iOS and Android. The app allows you to track real-time exchange rates, set alerts for specific currencies, and access conversion tools anytime, anywhere.",
+    },
+    {
+      question: "Are there any fees for using this website?",
+      answer:
+        "No, our website is completely free to use for checking live exchange rates and using the conversion tools. However, if you choose to exchange through a partner service, standard transaction fees may apply.",
+    },
+    {
+      question: "Can I track historical exchange rates?",
+      answer:
+        "Yes, you can view historical exchange rate data on our platform. We provide detailed charts and archives that allow you to analyze currency trends over days, months, or even years.",
     },
   ];
-
   return (
-    <div className="grid grid-cols-3">
+    <div id="faq" className="grid grid-cols-3">
       <div className="col-span-1 flex flex-col p-4 justify-center">
         <h1 className="text-5xl font-bold">Frequently Asked Question</h1>
         <h2 className="font-bold text-2xl">Get to know our company</h2>

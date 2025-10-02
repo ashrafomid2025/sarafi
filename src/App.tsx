@@ -9,6 +9,7 @@ import Blogs from "./pages/Blogs";
 import Navbar from "./components/Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="bg-stone-50 font-inter">
@@ -24,6 +25,7 @@ function App() {
             <Route element={<Blogs />} path="/blogs" />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

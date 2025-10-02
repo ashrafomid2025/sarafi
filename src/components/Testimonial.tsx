@@ -78,7 +78,7 @@ const Testimonial = () => {
     ],
   };
   return (
-    <div className="my-5 w-full flex flex-col items-center">
+    <div id="testimonial" className="my-5 w-full flex flex-col items-center">
       <h1 className="text-5xl font-bold">Testimonials</h1>
       <p className="text-base">Read the experience of our happy client</p>
       <div className="w-full ">

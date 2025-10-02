@@ -2,7 +2,10 @@ import { Bitcoin, CircleCheck, CurrencyIcon, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 export default function AboutUs() {
   return (
-    <div className="w-full min-h-screen overflow-x-hidden mt-5 grid grid-cols-1 md:grid-cols-2">
+    <div
+      id="about"
+      className="w-full min-h-screen overflow-x-hidden mt-5 grid grid-cols-1 md:grid-cols-2"
+    >
       <motion.div
         initial={{ x: "-50px" }}
         whileInView={{ x: 0 }}
