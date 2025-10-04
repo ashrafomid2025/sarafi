@@ -7,22 +7,22 @@ export default function Footer() {
       <section className="w-full grid grid-cols-1 md:grid-cols-3">
         <div className="flex flex-col justify-center">
           <h1 className="text-xl font-semibold">Company</h1>
-          <Link className="hover:text-gray-700" to="/">
+          <Link className="hover:text-gray-800" to="/">
             Home
           </Link>
-          <Link className="hover:text-gray-700" to="/exchange">
+          <Link className="hover:text-gray-800" to="/exchange">
             Exchange Rate
           </Link>
-          <Link className="hover:text-gray-700" to="/about">
+          <Link className="hover:text-gray-800" to="/about">
             About
           </Link>
-          <Link className="hover:text-gray-700" to="/blogs">
+          <Link className="hover:text-gray-800" to="/blogs">
             Blog
           </Link>
-          <Link className="hover:text-gray-700" to="/contact">
+          <Link className="hover:text-gray-800" to="/contact">
             Contact
           </Link>
-          <Link className="hover:text-gray-700" to="/market">
+          <Link className="hover:text-gray-800" to="/market">
             Contact
           </Link>
         </div>
