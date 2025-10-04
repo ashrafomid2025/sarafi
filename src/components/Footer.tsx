@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
       </section>
       <div className="text-center mt-4 text-base">
-        <p>Copyright 2025 all right resevred</p>
+        <p>Copyright &copy;2025 all right resevred</p>
       </div>
     </footer>
   );
