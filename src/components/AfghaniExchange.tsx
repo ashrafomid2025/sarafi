@@ -1,3 +1,4 @@
+import { Slice } from "lucide-react";
 import { use, useEffect, useState } from "react";
 
 export default function AfghaniExchange() {
@@ -5,45 +6,78 @@ export default function AfghaniExchange() {
   const [eur, setEur] = useState(0);
   const [pkr, setPkr] = useState(0);
   const [irr, setIrr] = useState(0);
-  const [tl, setTL] = useState(0);
-  async function fetData() {
+  const [gbp, setgbp] = useState(0);
+  const [date, setDate] = useState("");
+
+  async function fetDataDollor() {
     const response = await fetch(
-      "https://v6.exchangerate-api.com/v6/08cae4d0b79be5000a1e0a57/latest/AFN"
+      "https://v6.exchangerate-api.com/v6/08cae4d0b79be5000a1e0a57/latest/USD"
     );
     const data = await response.json();
-    setUsd(data.conversion_rates.USD);
-    setEur(data.conversion_rates.EUR);
-    setPkr(data.conversion_rates.PKR);
-    setTL(data.conversion_rates.TRY);
-    setIrr(data.conversion_rates.IRR);
+    setUsd(data.conversion_rates.AFN);
+    setDate(data.time_last_update_utc);
+  }
+  async function fetDataIR() {
+    const response = await fetch(
+      "https://v6.exchangerate-api.com/v6/08cae4d0b79be5000a1e0a57/latest/IRR"
+    );
+    const data = await response.json();
+    setIrr(data.conversion_rates.AFN * 100000);
+  }
+  async function fetDataPKR() {
+    const response = await fetch(
+      "https://v6.exchangerate-api.com/v6/08cae4d0b79be5000a1e0a57/latest/PKR"
+    );
+    const data = await response.json();
+    setPkr(data.conversion_rates.AFN);
+  }
+  async function fetDataGBP() {
+    const response = await fetch(
+      "https://v6.exchangerate-api.com/v6/08cae4d0b79be5000a1e0a57/latest/GBP"
+    );
+    const data = await response.json();
+    setgbp(data.conversion_rates.AFN);
+  }
+  async function fetDataEur() {
+    const response = await fetch(
+      "https://v6.exchangerate-api.com/v6/08cae4d0b79be5000a1e0a57/latest/EUR"
+    );
+    const data = await response.json();
+    setEur(data.conversion_rates.AFN);
   }
   useEffect(() => {
-    fetData();
+    fetDataDollor();
+    fetDataIR();
+    fetDataPKR();
+    fetDataGBP();
+    fetDataEur();
   }, []);
   return (
-    <div className="p-4 w-full flex flex-col">
+    <div className="p-4 mt-12 w-full flex flex-col">
       <div>
-        <h1>Exchange Rate of Afghani to some foriegn Currency</h1>
+        <h1>
+          Afghani to foriegn currency, last update: {date.substring(0, 17)}{" "}
+        </h1>
         <div className="mt-3 p-3 w-full grid gap-3 grid-col-1 md:grid-cols-3">
-          <div className="border p-3 rounded-xl shadow-xs flex justify-between">
+          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
             <span>Dollor</span>
             <span>{usd}</span>
           </div>
-          <div className="border p-3 rounded-xl shadow-xs flex justify-between">
+          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
             <span>Iraniran Toman</span>
-            <span>{irr / 1000}</span>
+            <span>{irr.toString().substring(0, 5)}</span>
           </div>
-          <div className="border p-3 rounded-xl shadow-xs flex justify-between">
+          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
             <span>PKR</span>
-            <span>{pkr}</span>
+            <span>{pkr * 1000}</span>
           </div>
-          <div className="border p-3 rounded-xl shadow-xs flex justify-between">
-            <span>Turkish Lira</span>
-            <span>{tl}</span>
+          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
+            <span>Pound</span>
+            <span>{gbp.toString().substring(0, 4)}</span>
           </div>
-          <div className="border p-3 rounded-xl shadow-xs flex justify-between">
+          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
             <span>Euro</span>
-            <span>{eur}</span>
+            <span>{eur.toString().substring(0, 4)}</span>
           </div>
         </div>
       </div>
