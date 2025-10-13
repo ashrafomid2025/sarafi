@@ -19,10 +19,15 @@
 
   /* variable  */
   .moto {
-    background-image: conic-gradient(from var(--degree), #ee0979, black);
+    background-image: conic-gradient(
+      from var(--degree),
+      #ee0979,
+      black,
+      #ee0979
+    );
     background-clip: text;
     color: transparent;
-    animation: rotate 2s infinite linear;
+    animation: rotate 5s infinite linear;
   }
   .slideBox {
     display: flex !important;

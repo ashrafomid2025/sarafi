@@ -13,7 +13,7 @@ export default function Hero() {
   ];
   return (
     <div className="w-full min-h-screen md:mt-5">
-      <div className="w-full flex items-center justify-center lg:h-screen">
+      <div className="w-full grid lg:h-screen grid-cols-1 md:grid-cols-2">
         <div className="flex-1">
           <div className="w-full flex h-screen flex-col justify-center items-center">
             <h1 className="lg:text-5xl moto md:text-3xl text-center font-bold">
@@ -44,24 +44,17 @@ export default function Hero() {
         <div className="flex-1 relative">
           <img src="./images/woman-shape-2.png" alt="" />
           <div className="absolute top-0 w-full flex justify-center items-center h-full right-0">
-            <div className="absolute right-24 top-8 bg-brand text-white rounded-full animate-bounce p-2 transition-all duration-[4000ms]">
+            <div className="absolute right-24 top-8 bg-brand text-white rounded-xl animate-bounce p-2 transition-all duration-[4000ms]">
               <Globe size={32} />
             </div>
-            <div className="absolute left-7 bottom-0 bg-brand text-white rounded-full animate-bounce p-2 transition-all duration-[4000ms]">
+            <div className="absolute left-7 bottom-0 bg-brand text-white rounded-xl animate-bounce p-2 transition-all duration-[4000ms]">
               <HandCoins size={32} />
             </div>
             <img
-              className="md:h-80 lg:h-full w-96 md:w-80"
+              className="md:h-80 lg:h-full w-96 md:w-80 lg:w-96"
               src="./images/banner-woman.png"
               alt=""
             />
-          </div>
-        </div>
-      </div>
-      <div className="absolute bottom-0 z-50 bg-white/90 text-black">
-        <div className="w-full relative overflow-x-hidden">
-          <div className="container mx-auto ">
-            <MarqueeItem texts={texts} />
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
-import { Slice } from "lucide-react";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function AfghaniExchange() {
   const [usd, setUsd] = useState(0);
@@ -45,6 +44,7 @@ export default function AfghaniExchange() {
     const data = await response.json();
     setEur(data.conversion_rates.AFN);
   }
+
   useEffect(() => {
     fetDataDollor();
     fetDataIR();
@@ -55,27 +55,27 @@ export default function AfghaniExchange() {
   return (
     <div className="p-4 mt-12 w-full flex flex-col">
       <div>
-        <h1>
+        <h1 className="text-center text-lg md:text-2xl font-semibold">
           Afghani to foriegn currency, last update: {date.substring(0, 17)}{" "}
         </h1>
         <div className="mt-3 p-3 w-full grid gap-3 grid-col-1 md:grid-cols-3">
-          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
-            <span>Dollor</span>
+          <div className="border-b-2 bg-white border-brand p-3 rounded-t-xl shadow-xs flex justify-between">
+            <span>Dollor US</span>
             <span>{usd}</span>
           </div>
-          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
+          <div className="border-b-2 bg-white border-brand p-3 rounded-t-xl shadow-xs flex justify-between">
             <span>Iraniran Toman</span>
             <span>{irr.toString().substring(0, 5)}</span>
           </div>
-          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
-            <span>PKR</span>
+          <div className="border-b-2 border-brand bg-white p-3 rounded-t-xl shadow-xs flex justify-between">
+            <span>Pakistani Rupee</span>
             <span>{pkr * 1000}</span>
           </div>
-          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
+          <div className="border-b-2 border-brand bg-white p-3 rounded-t-xl shadow-xs flex justify-between">
             <span>Pound</span>
             <span>{gbp.toString().substring(0, 4)}</span>
           </div>
-          <div className="border-b-2 border-blue-600 p-3 rounded-t-xl shadow-xs flex justify-between">
+          <div className="border-b-2 border-brand bg-white p-3 rounded-t-xl shadow-xs flex justify-between">
             <span>Euro</span>
             <span>{eur.toString().substring(0, 4)}</span>
           </div>

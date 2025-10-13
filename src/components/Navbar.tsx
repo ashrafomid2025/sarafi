@@ -53,9 +53,9 @@ export default function Navbar() {
       {isOpen && (
         <div className="mt-3 flex  items-center flex-col gap-4 h-screen w-full backdrop-blur-md">
           {navList.map((item, index) => (
-            <a key={index} href={item.href}>
+            <Link key={index} onClick={() => setIsOpen(!isOpen)} to={item.href}>
               {item.title}
-            </a>
+            </Link>
           ))}
         </div>
       )}
