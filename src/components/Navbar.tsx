@@ -17,14 +17,16 @@ export default function Navbar() {
     { href: "/blogs", title: "Blogs" },
   ];
   return (
-    <div className="w-full fixed top-0 left-0 md:p-3 backdrop-blur-xl ">
+    <div className="w-full fixed top-0 left-0 md:p-3 z-50 backdrop-blur-2xl ">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="font-brush text-xl font-bold">Sharifi Exchage Rate</h1>
+          <h1 className="font-brush text-xl font-bold">
+            Sharifi Exchange Rate
+          </h1>
         </div>
-        <div className="hidden md:flex justify-center space-x-3">
+        <div className="hidden md:flex py-2 px-3 rounded-xl bg-gray-300/45 justify-center space-x-3">
           {navList.map((nav, idx) => (
-            <Link key={idx} to={nav.href}>
+            <Link key={idx} to={nav.href} className="relative ">
               {nav.title}
             </Link>
           ))}
@@ -32,7 +34,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-4">
           <Button
             variant="outline"
-            className="rounded-md hover:bg-brand hover:text-white bg-brand text-xl font-semibold text-white"
+            className="rounded-md border-1 hover:border-brand  border-brand text-xl font-semibold text-brand"
           >
             {shamsi}
           </Button>

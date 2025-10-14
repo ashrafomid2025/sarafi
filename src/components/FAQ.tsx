@@ -61,7 +61,10 @@ export default function FAQ() {
     },
   ];
   return (
-    <div id="faq" className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+    <div
+      id="faq"
+      className="grid my-12 grid-cols-1 lg:grid-cols-3 md:grid-cols-2"
+    >
       <div className="lg:col-span-1 flex flex-col p-4 justify-center">
         <h1 className="text-5xl font-bold">Frequently Asked Question</h1>
         <h2 className="font-bold text-2xl">Get to know our company</h2>

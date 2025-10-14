@@ -16,7 +16,15 @@
   .brand-color {
     background-color: #60a5fa;
   }
-
+  .slick-slide > div {
+    display: flex !important;
+    justify-content: center;
+  }
+  .container1 {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
   /* variable  */
   .moto {
     background-image: conic-gradient(

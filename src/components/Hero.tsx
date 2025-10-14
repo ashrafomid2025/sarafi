@@ -1,28 +1,21 @@
-import { ChevronRight, Code, Globe, HandCoins } from "lucide-react";
+import { ChevronRight, CircleDollarSign, Globe, HandCoins } from "lucide-react";
 import { Button } from "./ui/button";
 
-import MarqueeItem from "./VelocityText";
-
 export default function Hero() {
-  const texts = [
-    "Exchange Rate",
-    "Updates Realtime",
-    "Exchange anything",
-    "trustful source",
-    "Built with ❤️",
-  ];
   return (
     <div className="w-full min-h-screen md:mt-5">
-      <div className="w-full grid lg:h-screen grid-cols-1 md:grid-cols-2">
-        <div className="flex-1">
-          <div className="w-full flex h-screen flex-col justify-center items-center">
+      <div className="w-full grid lg:h-screen gap-1 md:gap-4 grid-cols-1 md:grid-cols-2">
+        <div className="">
+          <div className="w-full md:flex h-screen flex-col justify-center items-center">
             <h1 className="lg:text-5xl moto md:text-3xl text-center font-bold">
               Instant Currency Exchange, Powered by the Latest Market Updates.
             </h1>
             <div>
               <p className="text-base text-center mt-8">
-                Get the financial tools and insights to start, build, and grow
-                your business
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Exercitationem eum sunt commodi laborum debitis neque delectus
+                mollitia quibusdam. Ea blanditiis velit fugiat obcaecati
+                similique ad necessitatibus ab, assumenda quas cupiditate.
               </p>
             </div>
             <div className="flex gap-4 mt-8">
@@ -44,15 +37,15 @@ export default function Hero() {
         <div className="flex-1 relative">
           <img src="./images/woman-shape-2.png" alt="" />
           <div className="absolute top-0 w-full flex justify-center items-center h-full right-0">
-            <div className="absolute right-24 top-8 bg-brand text-white rounded-xl animate-bounce p-2 transition-all duration-[4000ms]">
+            {/* <div className="absolute right-24 top-8 bg-brand text-white rounded-xl animate-bounce p-2 transition-all duration-[4000ms]">
               <Globe size={32} />
             </div>
-            <div className="absolute left-7 bottom-0 bg-brand text-white rounded-xl animate-bounce p-2 transition-all duration-[4000ms]">
-              <HandCoins size={32} />
-            </div>
+            <div className="absolute left-7 bottom-5 bg-brand text-white rounded-xl animate-bounce p-2 transition-all duration-[4000ms]">
+              <CircleDollarSign size={32} />
+            </div> */}
             <img
-              className="md:h-80 lg:h-full w-96 md:w-80 lg:w-96"
-              src="./images/banner-woman.png"
+              className="md:h-80 lg:h-8/12 w-full md:w-80 lg:w-full rounded-xl"
+              src="https://plus.unsplash.com/premium_photo-1741072497758-78c578fead00?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
               alt=""
             />
           </div>
