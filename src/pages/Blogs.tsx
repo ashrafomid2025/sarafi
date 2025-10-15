@@ -1,3 +1,9 @@
+import Articles from "@/components/Articles";
+
 export default function Blogs() {
-  return <div>Blogs page</div>;
+  return (
+    <div>
+      <Articles />
+    </div>
+  );
 }
