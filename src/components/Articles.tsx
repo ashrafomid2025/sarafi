@@ -2,29 +2,18 @@ import { useEffect, useState } from "react";
 import SingleArticle from "./SingleArticle";
 
 const API_KEY = "88a68df397d7dd162099b2864d17492f";
-const URL = `https://gnews.io/api/v4/search?q=Google&lang=en&max=10&apikey=${API_KEY}`;
-// const news: {
-//   id: string;
-//   title: string;
-//   description: string;
-//   content: string;
-//   url: string;
-//   image: string;
-//   publishedAt: string;
-//   lang: string;
-//   source: object;
-// };
-export default function Articles() {
-  type Article = {
-    title: string;
-    description: string;
-    content: string;
-    url: string;
-    image: string;
-    publishedAt: string;
-    source: { name: string; url: string };
-  };
+const URL = `https://gnews.io/api/v4/search?q=Business&lang=en&max=10&apikey=${API_KEY}`;
+type Article = {
+  title: string;
+  description: string;
+  content: string;
+  url: string;
+  image: string;
+  publishedAt: string;
+  source: { name: string; url: string };
+};
 
+export default function Articles() {
   const [news, setNews] = useState<Article[]>([]);
   useEffect(() => {
     async function fetchData() {

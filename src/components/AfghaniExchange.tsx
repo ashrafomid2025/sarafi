@@ -55,29 +55,36 @@ export default function AfghaniExchange() {
   return (
     <div className="p-4 mt-12 w-full flex flex-col">
       <div>
-        <h1 className="text-center text-lg md:text-2xl font-semibold">
-          Afghani to foriegn currency, last update: {date.substring(0, 17)}{" "}
+        <h1 className="text-center text-lg bg-white rounded-t-md  mt-6 p-6 md:text-2xl font-semibold">
+          Latest Afghani to Foreign Currency Rates — Updated:{" "}
+          {date.substring(0, 17)}{" "}
         </h1>
-        <div className="mt-3 p-3 w-full grid gap-3 grid-col-1 md:grid-cols-3">
-          <div className="border-b-2 bg-white border-brand p-3 rounded-t-xl shadow-xs flex justify-between">
-            <span>Dollor US</span>
-            <span>{usd}</span>
+        <div className=" p-3 w-full grid gap-3 grid-col-1 ">
+          <div className="border-l-2 bg-white border-brand p-3  shadow-xs flex justify-between">
+            <span className="text-2xl font-bold">Dollor United States</span>
+            <span className="text-2xl font-bold">{usd}</span>
           </div>
-          <div className="border-b-2 bg-white border-brand p-3 rounded-t-xl shadow-xs flex justify-between">
-            <span>Iraniran Toman</span>
-            <span>{irr.toString().substring(0, 5)}</span>
+          <div className="border-l-2 bg-white border-brand p-3 shadow-xs flex justify-between">
+            <span className="text-2xl font-bold">Iraniran Toman</span>
+            <span className="text-2xl font-bold">
+              {irr.toString().substring(0, 5)}
+            </span>
           </div>
-          <div className="border-b-2 border-brand bg-white p-3 rounded-t-xl shadow-xs flex justify-between">
-            <span>Pakistani Rupee</span>
-            <span>{pkr * 1000}</span>
+          <div className="border-l-2 border-brand bg-white p-3  shadow-xs flex justify-between">
+            <span className="text-2xl font-bold">Pakistani Rupee</span>
+            <span className="text-2xl font-bold">{pkr * 1000}</span>
           </div>
-          <div className="border-b-2 border-brand bg-white p-3 rounded-t-xl shadow-xs flex justify-between">
-            <span>Pound</span>
-            <span>{gbp.toString().substring(0, 4)}</span>
+          <div className="border-l-2 border-brand bg-white p-3  shadow-xs flex justify-between">
+            <span className="text-2xl font-bold">Pound</span>
+            <span className="text-2xl font-bold">
+              {gbp.toString().substring(0, 4)}
+            </span>
           </div>
-          <div className="border-b-2 border-brand bg-white p-3 rounded-t-xl shadow-xs flex justify-between">
-            <span>Euro</span>
-            <span>{eur.toString().substring(0, 4)}</span>
+          <div className="border-l-2 border-brand bg-white p-3  shadow-xs flex justify-between">
+            <span className="text-2xl font-bold">Euro</span>
+            <span className="text-2xl font-bold">
+              {eur.toString().substring(0, 4)}
+            </span>
           </div>
         </div>
       </div>

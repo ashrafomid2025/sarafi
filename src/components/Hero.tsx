@@ -11,11 +11,13 @@ export default function Hero() {
               Instant Currency Exchange, Powered by the Latest Market Updates.
             </h1>
             <div>
-              <p className="text-base text-center mt-8">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem eum sunt commodi laborum debitis neque delectus
-                mollitia quibusdam. Ea blanditiis velit fugiat obcaecati
-                similique ad necessitatibus ab, assumenda quas cupiditate.
+              <p className="text-base text-justify mt-8">
+                Experience seamless Afghani currency conversion with real-time,
+                reliable market data. Our platform delivers instant results and
+                the most accurate exchange rates available. Track live rate
+                fluctuations to make informed exchange decisions. Whether for
+                travel, trade, or investment, you’ll always get the best
+                possible value for your Afghani.
               </p>
             </div>
             <div className="flex gap-4 mt-8">

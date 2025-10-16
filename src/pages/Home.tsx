@@ -1,5 +1,6 @@
 import AboutUs from "@/components/About";
 import FAQ from "@/components/FAQ";
+import { Feature } from "@/components/Features";
 import Hero from "@/components/Hero";
 import Testimonial from "@/components/Testimonial";
 
@@ -8,6 +9,7 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <Hero />
       <AboutUs />
+      <Feature />
       <Testimonial />
       <FAQ />
     </div>

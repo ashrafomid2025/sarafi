@@ -7,7 +7,7 @@ function SingleFaq({ q, a, index }: { q: string; a: string; index: number }) {
     <motion.div
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: false }}
+      viewport={{ once: false, amount: 0.4 }}
       transition={{ duration: 0.5, delay: index * 0.2, ease: "easeInOut" }}
       className="w-full flex flex-col p-3"
     >

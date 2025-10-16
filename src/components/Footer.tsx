@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="p-3 w-full mt-4 rounded-t-xl bg-white">
+    <footer className="p-12 w-full max-w-6xl mx-auto mt-4 text-white rounded-t-xl bg-gray-800">
       <section className="w-full grid grid-cols-1 md:grid-cols-3">
         <div className="flex flex-col justify-center">
           <h1 className="text-xl font-semibold">Company</h1>
@@ -37,7 +37,7 @@ export default function Footer() {
           <h1 className="text-xl font-semibold">Contact</h1>
           <div className="flex items-center gap-2">
             <Phone />
-            <a href="tel:+93798899090">+93798899090</a>
+            <a href="tel:+93798899090">Call Now</a>
           </div>
           <div className="flex items-center gap-2">
             <Linkedin />
@@ -55,14 +55,14 @@ export default function Footer() {
             </a>
           </div>{" "}
           <div className="flex items-center gap-2">
-            <img src="./images/whatsapp.svg" className="h-6 w-6" alt="" />
+            <i className="fa-brands fa-whatsapp text-2xl"></i>
             <a href="https://wa.me/+93794842517" target="_blank">
               WhatsApp
             </a>
           </div>
         </div>
       </section>
-      <div className="text-center mt-4 text-base">
+      <div className="text-center mt-8 text-base">
         <p>Copyright &copy;2025 all right resevred</p>
       </div>
     </footer>
