@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="p-12 w-full max-w-6xl mx-auto mt-4 text-white rounded-t-xl bg-gray-800">
+    <footer className="px-12 pt-12 w-full max-w-6xl mx-auto mt-4 text-white rounded-t-xl bg-gray-800">
       <section className="w-full grid grid-cols-1 md:grid-cols-3">
         <div className="flex flex-col justify-center">
           <h1 className="text-xl font-semibold">Company</h1>
@@ -62,8 +62,8 @@ export default function Footer() {
           </div>
         </div>
       </section>
-      <div className="text-center mt-8 text-base">
-        <p>Copyright &copy;2025 all right resevred</p>
+      <div className="text-center pt-12 mt-auto text-base">
+        <p>Copyright &copy; M. Ashraf Omid 2025 all right resevred</p>
       </div>
     </footer>
   );

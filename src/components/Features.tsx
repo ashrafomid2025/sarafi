@@ -26,39 +26,39 @@ const Feature = ({
   title = "Why Choose Us?",
   features = [
     {
-      heading: "Quality",
+      heading: "Real-Time Rates",
       description:
-        "Built with attention to detail and best practices. Every component is thoroughly tested and follows modern React patterns for reliability and performance.",
+        "Access live exchange rates updated every few seconds. Stay ahead with accurate and transparent data sourced from trusted global markets.",
       icon: <GitPullRequest className="size-6" />,
     },
     {
-      heading: "Experience",
+      heading: "Seamless Experience",
       description:
-        "Crafted with user experience in mind. Each component is designed to be intuitive, accessible, and provide smooth interactions across all devices.",
+        "Enjoy a smooth and intuitive interface designed for effortless currency conversion. Whether on mobile or desktop, get instant results with zero hassle.",
       icon: <SquareKanban className="size-6" />,
     },
     {
-      heading: "Support",
+      heading: "Reliable Data",
       description:
-        "Comprehensive documentation and community support. Get help when you need it with detailed guides, examples, and active community assistance.",
+        "Our exchange rates are backed by verified market sources and financial APIs. You can trust every conversion to reflect real-world values accurately.",
       icon: <RadioTower className="size-6" />,
     },
     {
-      heading: "Innovation",
+      heading: "Smart Insights",
       description:
-        "Cutting-edge design patterns and modern web technologies. Stay ahead with the latest trends in UI/UX design and development practices.",
+        "Go beyond conversion — analyze trends, track rate history, and make informed exchange decisions with powerful insights and up-to-date analytics.",
       icon: <WandSparkles className="size-6" />,
     },
     {
-      heading: "Results",
+      heading: "Global Coverage",
       description:
-        "Proven track record of successful implementations. These components have been battle-tested in real-world applications and deliver consistent results.",
+        "Convert Afghani to dozens of foreign currencies worldwide. From USD and EUR to INR and GBP, our platform covers all major and regional currencies.",
       icon: <Layers className="size-6" />,
     },
     {
-      heading: "Efficiency",
+      heading: "Speed & Efficiency",
       description:
-        "Optimized for performance and developer productivity. Lightweight, fast-loading components that help you build faster without compromising on quality.",
+        "Experience lightning-fast conversions optimized for performance. Our platform ensures quick responses and minimal load times for a flawless experience.",
       icon: <BatteryCharging className="size-6" />,
     },
   ],
