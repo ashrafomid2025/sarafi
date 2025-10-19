@@ -1,13 +1,4 @@
-import {
-  Building,
-  CheckCircle2,
-  CircleDollarSign,
-  CoinsIcon,
-  CurrencyIcon,
-  Gem,
-  Globe,
-  Pickaxe,
-} from "lucide-react";
+import { CheckCircle2, CircleDollarSign, Gem, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 export default function AboutUs() {
   return (

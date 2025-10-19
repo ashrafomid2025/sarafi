@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SingleArticle from "./SingleArticle";
+
 import { Button } from "./ui/button";
 
 const API_KEY = "88a68df397d7dd162099b2864d17492f";

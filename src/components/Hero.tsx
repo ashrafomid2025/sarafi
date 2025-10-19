@@ -1,4 +1,4 @@
-import { ChevronRight, CircleDollarSign, Globe, HandCoins } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Hero() {
