@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 function Header() {
   return (
-    <div className="w-full grid gap-3 grid-cols-1 md:grid-cols-2 bg-white rounded-md">
+    <div className="w-full grid gap-3 grid-cols-1 md:border  md:grid-cols-2 bg-white rounded-md">
       <motion.div
         initial={{ y: -80 }}
         whileInView={{ y: 0 }}
         viewport={{ amount: 0.5, once: false }}
         transition={{ duration: 0.8, ease: "linear" }}
-        className="rounded-l-md w-full"
+        className="rounded-l-md w-full h-72 border"
       >
         <img
           className="h-full w-full object-cover rounded-l-md"
@@ -23,10 +23,10 @@ function Header() {
       >
         <h1 className="font-bold text-4xl my-2">About Us</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque soluta
-          assumenda unde doloribus corrupti cupiditate nihil sequi magnam
-          repellendus quaerat, ratione at optio? Doloremque libero, itaque
-          perspiciatis minima facere culpa.
+          Exchange Rate API provides accurate, fast, and reliable currency
+          exchange data from global financial sources. It’s designed for
+          developers, fintech startups, and businesses that need up-to-date
+          forex information for applications, dashboards, or ecommerce platforms
         </p>
       </motion.div>
     </div>
