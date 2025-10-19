@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState, useTransition } from "react";
 import { motion } from "framer-motion";
 const API_KEY = "88a68df397d7dd162099b2864d17492f";
-const URL = `https://gnews.io/api/v4/search?q=Business&lang=en&max=12&apikey=${API_KEY}`;
+const URL = `https://cors-anywhere.herokuapp.com/https://gnews.io/api/v4/search?q=Business&lang=en&max=12&apikey=${API_KEY}`;
 export default function Articles() {
   type Article = {
     id: string;
@@ -31,7 +31,7 @@ export default function Articles() {
         Big Headlines of Business
       </h1>
       {isPending ? (
-        <div className="h-48 w-full flex justify-center items-center">
+        <div className="h-44 w-full flex justify-center items-center">
           <h1>Loading, Please wait</h1>
         </div>
       ) : (
