@@ -14,7 +14,7 @@ export default function Navbar() {
     { href: "/about", title: "About" },
     { href: "/contact", title: "Contact" },
     // { href: "/market", title: "Market" },
-    { href: "/blogs", title: "Blogs" },
+    // { href: "/blogs", title: "Blogs" },
   ];
   return (
     <div className="w-full fixed top-0 left-0 md:p-3 z-50 backdrop-blur-2xl ">
