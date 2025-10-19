@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export default function Hero() {
   return (
-    <div className="w-full md:mt-5">
+    <div className="w-full pt-24 md:mt-5">
       <div className="w-full grid lg:h-screen gap-2 md:gap-4 grid-cols-1 md:grid-cols-2">
         <div className="">
           <div className="w-full md:flex h-fit flex-col justify-center items-center">
