@@ -63,7 +63,7 @@ export default function Contact() {
             </div>
             <div className="flex items-center gap-2 ">
               <Facebook className="text-brand" />{" "}
-              <a href="tel:+93794842517">Github</a>
+              <a href="tel:+93794842517">Facebook</a>
             </div>
             <p className="text-justify">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
