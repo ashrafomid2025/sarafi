@@ -13,7 +13,7 @@ export default function Navbar() {
     { href: "/exchange", title: "Exchange" },
     { href: "/about", title: "About" },
     { href: "/contact", title: "Contact" },
-    { href: "/market", title: "Market" },
+    // { href: "/market", title: "Market" },
     { href: "/blogs", title: "Blogs" },
   ];
   return (
