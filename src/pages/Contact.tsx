@@ -36,7 +36,7 @@ export default function Contact() {
           setName("");
         },
         (error) => {
-          alert("FAILED...");
+          alert("FAILED..." + error);
         }
       );
   }
