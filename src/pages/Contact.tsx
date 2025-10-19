@@ -43,8 +43,8 @@ export default function Contact() {
 
   return (
     <div className="py-24">
-      <div className="w-full px-2  md:p-0 my-8">
-        <div className="w-full grid gap-2 md:grid-cols-2 grid-cols-1">
+      <div className="w-full   md:p-0 my-8">
+        <div className="w-full grid px-2 gap-2 md:grid-cols-2 grid-cols-1">
           <div className="border-l-2 bg-white border-brand p-4 rounded-r-xl flex flex-col gap-3">
             <h1 className="text-3xl uppercase font-bold text-brand text-center">
               Get in touch
