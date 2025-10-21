@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Facebook, Github, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -12,19 +15,18 @@ export default function Contact() {
     const public_key = "7X9RRkfyM6CU0pUlh";
     const template_id = "template_w9qyf0r";
     const service_id = "service_e61cqxm";
-
     const content: {
       from_name: string;
       from_email: string;
       subject: string;
-      to_name: string;
       message: string;
+      to_name: string;
     } = {
       from_name: name,
       from_email: email,
       subject: subject,
-      to_name: "Ashraf Omid",
       message: message,
+      to_name: "Ashraf Omid",
     };
     emailjs
       .send(service_id, template_id, content, {
@@ -32,11 +34,20 @@ export default function Contact() {
       })
       .then(
         () => {
-          alert("success");
+          toast.info(
+            "You message sent successfully, We will get back to you soon",
+            { position: "bottom-right", autoClose: 8000 }
+          );
           setName("");
+          setEmail("");
+          setMessage("");
+          setSubject("");
         },
         (error) => {
-          alert("FAILED..." + error);
+          toast.error("Sorry, something went wrong", {
+            position: "bottom-right",
+            autoClose: 8000,
+          });
         }
       );
   }
@@ -115,6 +126,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

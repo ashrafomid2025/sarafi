@@ -23,6 +23,7 @@
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.1",
     "react-slick": "^0.31.0",
+    "react-toastify": "^11.0.5",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "slick-carousel": "^1.8.1",
