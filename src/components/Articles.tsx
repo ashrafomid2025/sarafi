@@ -45,7 +45,7 @@ export default function Articles() {
               <div className="relative w-full h-full">
                 <img
                   src={item.urlToImage}
-                  alt={item.id}
+                  alt={item.publishedAt}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute left-0 bottom-0 h-6/12 overflow-y-hidden bg-black/50 p-2 w-full">
