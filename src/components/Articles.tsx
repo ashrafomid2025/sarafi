@@ -24,8 +24,8 @@ export default function Articles() {
   }, []);
   return (
     <div className="py-24">
-      <h1 className="text-center text-5xl uppercase my-5 font-bold">
-        Big Headlines at the moment
+      <h1 className="text-center text-2xl md:text-4xl  uppercase my-5 font-bold">
+        Big Headlines across the globe at the moment
       </h1>
       {isPending ? (
         <div className="h-44 w-full flex justify-center items-center">
