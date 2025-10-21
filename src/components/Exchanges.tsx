@@ -3,7 +3,7 @@ const URL = "https://v6.exchangerate-api.com/v6/";
 const API_KEY = "08cae4d0b79be5000a1e0a57";
 
 export default function Exchanges() {
-  const [from, setFrom] = useState("AFA");
+  const [from, setFrom] = useState("AFN");
   const [to, setTo] = useState("USD");
   const [input, setInput] = useState(0);
   const [output, setoutput] = useState(0);
