@@ -5,7 +5,6 @@ const API_KEY = "420f898b11154858acbbb5c89a6bca6f";
 const URL = `https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=${API_KEY}`;
 export default function Articles() {
   type Article = {
-    id: string;
     title: string;
     url: string;
     urlToImage: string;
@@ -40,7 +39,7 @@ export default function Articles() {
               whileInView={{ opacity: 1 }}
               viewport={{ amount: 0.4, once: false }}
               transition={{ duration: 0.8, delay: 0.2 * index }}
-              id={item.id}
+              key={index}
               className="border h-96 overflow-hidden rounded-md bg-white"
             >
               <div className="relative w-full h-full">
