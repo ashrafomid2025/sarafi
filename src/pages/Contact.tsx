@@ -44,7 +44,7 @@ export default function Contact() {
           setSubject("");
         },
         (error) => {
-          toast.error("Sorry, something went wrong", {
+          toast.error("Sorry, something went wrong" + error, {
             position: "bottom-right",
             autoClose: 8000,
           });
