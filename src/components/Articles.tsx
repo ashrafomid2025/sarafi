@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState, useTransition } from "react";
 import { motion } from "framer-motion";
 const API_KEY = "420f898b11154858acbbb5c89a6bca6f";
-const URL = `https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=${API_KEY}`;
+const URL = `http://newsapi.org/v2/top-headlines?sources=cnn&apiKey=${API_KEY}`;
 export default function Articles() {
   type Article = {
     title: string;
