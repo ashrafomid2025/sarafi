@@ -25,14 +25,14 @@ export default function Articles() {
   return (
     <div className="py-24">
       <h1 className="text-center text-5xl uppercase my-5 font-bold">
-        Big Headlines Today
+        Big Headlines at the moment
       </h1>
       {isPending ? (
         <div className="h-44 w-full flex justify-center items-center">
           <h1>Loading, Just a moment</h1>
         </div>
       ) : (
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 p-2 gap-2">
+        <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 p-2 gap-2">
           {news.map((item, index) => (
             <motion.div
               initial={{ opacity: 0 }}
