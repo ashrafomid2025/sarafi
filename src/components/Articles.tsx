@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useTransition } from "react";
 import { motion } from "framer-motion";
-const API_KEY = "420f898b11154858acbbb5c89a6bca6f";
-const URL = `http://newsapi.org/v2/top-headlines?sources=cnn&apiKey=${API_KEY}`;
+const API_KEY = "9kQiLxKP2ohhICfSawioKcNc7xxjkBK2U70p5Vu6";
+const URL = `https://api.thenewsapi.com/v1/news/all?api_token=${API_KEY}&language=en&limit=3`;
 export default function Articles() {
   type Article = {
     title: string;
     url: string;
-    urlToImage: string;
-    publishedAt: string;
+    image_url: string;
+    published_at: string;
   };
   const [news, setNews] = useState<Article[]>([]);
   const [isPending, startTransition] = useTransition();
@@ -17,7 +17,7 @@ export default function Articles() {
       startTransition(async () => {
         const response = await fetch(URL);
         const data = await response.json();
-        setNews(data.articles);
+        setNews(data.data);
       });
     }
     fetchData();
@@ -44,8 +44,8 @@ export default function Articles() {
             >
               <div className="relative w-full h-full">
                 <img
-                  src={item.urlToImage}
-                  alt={item.publishedAt}
+                  src={item.image_url}
+                  alt={item.published_at}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute left-0 bottom-0 h-6/12 overflow-y-hidden bg-black/50 p-2 w-full">
