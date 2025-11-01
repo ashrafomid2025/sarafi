@@ -30,10 +30,10 @@ export default function Exchanges() {
     <div className=" my-8 max-w-3xl mx-auto p-4 flex justify-center items-center">
       {/* card */}
       <div className="border bg-white  transition-all duration-300  hover:shadow-xl rounded-md p-4">
-        <h1 className="text-center py-3 font-bold text-2xl">
+        <h1 className="text-center py-3 font-bold bg-linear-60 from-gray-400 to-gray-300 via-gray-500 text-2xl text-transparent bg-clip-text">
           Exchange Rates & Currency Converter
         </h1>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
           <div className="">
             <div className="w-full flex flex-col gap-2 items-center">
               <label htmlFor="from">From</label>

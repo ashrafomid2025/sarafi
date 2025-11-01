@@ -62,7 +62,9 @@ export default function AfghaniExchange() {
         <div className=" p-3 w-full grid gap-3 grid-col-1 ">
           <div className="border-l-2 bg-white border-brand p-3  shadow-xs flex justify-between">
             <span className="text-2xl font-bold">Dollor United States</span>
-            <span className="text-2xl font-bold">{usd}</span>
+            <span className="text-2xl font-bold">
+              {usd.toString().substring(0, 4)}
+            </span>
           </div>
           <div className="border-l-2 bg-white border-brand p-3 shadow-xs flex justify-between">
             <span className="text-2xl font-bold">Iraniran Toman</span>
